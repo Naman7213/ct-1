@@ -7,7 +7,7 @@
 using namespace std;
 
 
-pair<int,bool> isConsecutive(int arr[],int n){
+pair<int,bool> is_consecutive(int arr[],int n){
 	sort(arr,arr+n);
 	for(int i=1;i<n;i++){
 		if(arr[i]-arr[i-1]!=1){
@@ -30,7 +30,7 @@ int main(){
 		mx=max(mx,ele);
 		arr[i]=ele;
 	}
-	pair<int,bool> ans=isConsecutive(arr,n);
+	pair<int,bool> ans=is_consecutive(arr,n);
 	if(ans.second==true){
 		cout<<"The array contains consecutive integers from "<<mn<<" to "<<mx<<endl;
 	}
